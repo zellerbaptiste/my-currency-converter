@@ -17,6 +17,11 @@ export function Counter() {
 
   const incrementValue = Number(incrementAmount) || 0;
 
+  const handleClick = () => {
+    debugger;
+    dispatch(incrementByAmount(incrementValue));
+  }
+
   return (
     <div>
       <div className={styles.row}>
@@ -45,7 +50,7 @@ export function Counter() {
         />
         <button
           className={styles.button}
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
+          onClick={() => handleClick()}
         >
           Add Amount
         </button>
